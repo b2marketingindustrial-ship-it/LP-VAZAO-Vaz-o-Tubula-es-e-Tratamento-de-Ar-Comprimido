@@ -21,13 +21,14 @@ Todas entram **sozinhas** quando o arquivo for adicionado com o nome exato. Até
 | `logo-vazao.webp` (já incluída) | topo e rodapé | 230×72 |
 | `logo-parker.png` | aba Parker da vitrine | 400×160, fundo transparente |
 | `logo-ingersoll-rand.png` | aba Ingersoll Rand da vitrine | 400×160, fundo transparente |
-| `banner-topo.jpg` | painel azul do topo, atrás do chat | 1200×900 |
-| `linha-filtros-oil-x.jpg` | linha Filtros OIL-X | 800×600 |
-| `linha-secadores-pse.jpg` | linha Secadores PSE | 800×600 |
-| `linha-secadores-adsorcao.jpg` | linha CDAS HL e K-MT | 800×600 |
-| `linha-tubulacao-simplair.jpg` | linha SimplAir | 800×600 |
+| `banner-topo.jpg` (já incluída) | foto do topo, atrás do chat | 1200×900 |
+| `cta-fundo.jpg` (já incluída) | foto do banner azul | 800×724 |
+| `linha-filtros-oil-x.jpg` (já incluída) | linha Filtros OIL-X | 800×600 |
+| `linha-secadores-pse.jpg` (já incluída) | linha Secadores PSE | 800×600 |
+| `linha-secadores-adsorcao.jpg` (já incluída) | linha CDAS HL e K-MT | 800×600 |
+| `linha-tubulacao-simplair.jpg` (já incluída) | linha SimplAir | 800×600 |
 
-Fotos da vitrine em `assets/produtos/` (800×600, produto recortado em fundo branco):
+Fotos da vitrine em `assets/produtos/`. As 8 da Parker já estão incluídas (imagens ilustrativas, 2:1 com fundo azul-claro). As da Ingersoll Rand: 800×600, produto recortado em fundo branco.
 
 | Parker | Ingersoll Rand |
 |---|---|
