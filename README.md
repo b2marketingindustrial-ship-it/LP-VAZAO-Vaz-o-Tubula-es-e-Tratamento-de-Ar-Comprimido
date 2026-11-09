@@ -9,7 +9,7 @@ Regras de texto: Parker aparece só como "soluções Parker" (nunca distribuidor
 ## Estrutura
 
 - `index.html`: página única e autocontida (HTML, CSS e JS inline), mesma identidade visual da LP NR13 e do site da Vazão.
-- Seções: topo com chat · vitrine Ingersoll Rand (23 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
+- Seções: topo com chat · vitrine Ingersoll Rand (22 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
 - O botão "Solicitar cotação" de cada produto já preenche **Interesse** e **Produto** no formulário.
 
 ## Imagens (`assets/`)
@@ -22,12 +22,11 @@ Todas entram **sozinhas** quando o arquivo for adicionado com o nome exato. Até
 | `banner-topo.jpg` (já incluída) | foto do topo, atrás do chat | 1200×900 |
 | `cta-fundo.jpg` (já incluída) | foto do banner azul | 800×724 |
 
-Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto em fundo branco, recortadas dos prints do site da Vazão. A da SimplAir é foto de ambiente. Falta só `ir-separadores-polysep.jpg`. Entram sozinhas quando o arquivo for adicionado com o nome exato.
+Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto em fundo branco, recortadas dos prints do site da Vazão. A da SimplAir é foto de ambiente. Entram sozinhas quando o arquivo for adicionado com o nome exato.
 
 | Produto | Arquivo |
 |---|---|
 | Tubulação alumínio SimplAir | `ir-tubulacao-aluminio-simplair.jpg` |
-| Separadores óleo-água PolySep | `ir-separadores-polysep.jpg` |
 | Dreno sem perdas Liquidator | `ir-dreno-liquidator.jpg` |
 | Drenos eletrônicos sem perda | `ir-drenos-eletronicos.jpg` |
 | Drenos sem perda (PNLD II) | `ir-drenos-pnld-ii.jpg` |
