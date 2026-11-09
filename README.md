@@ -9,7 +9,7 @@ Regras de texto: Parker aparece só como "soluções Parker" (nunca distribuidor
 ## Estrutura
 
 - `index.html`: página única e autocontida (HTML, CSS e JS inline), mesma identidade visual da LP NR13 e do site da Vazão.
-- Seções: topo com chat · vitrine Ingersoll Rand (22 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
+- Seções: topo com chat · vitrine Ingersoll Rand (20 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
 - O botão "Solicitar cotação" de cada produto já preenche **Interesse** e **Produto** no formulário.
 
 ## Imagens (`assets/`)
@@ -46,8 +46,6 @@ Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto
 | Secador por refrigeração 10–150 cfm | `ir-secador-refrigeracao-10-150-cfm.jpg` |
 | Secadores por refrigeração 3.600 a 24.000 CFM | `ir-secadores-refrigeracao-3600-24000-cfm.jpg` |
 | Secadores por refrigeração Nirvana | `ir-secadores-refrigeracao-nirvana.jpg` |
-| Secadores por refrigeração sem ciclo | `ir-secadores-refrigeracao-sem-ciclo.jpg` |
-| Secadores por refrigeração Série DA | `ir-secadores-refrigeracao-serie-da.jpg` |
 
 ## Configuração (bloco `CONFIG` no fim do `index.html`)
 
