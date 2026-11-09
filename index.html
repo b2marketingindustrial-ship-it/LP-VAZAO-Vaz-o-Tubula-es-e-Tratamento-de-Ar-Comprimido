@@ -193,37 +193,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* Fotos de catálogo (produto em fundo branco): mostra inteira, sem cortar */
 .media.fit.loaded{background-color:#fff;background-size:contain;background-repeat:no-repeat;background-origin:content-box;padding:14px}
 
-/* ---------- Linhas de produto (carrossel) ---------- */
-.lines{background:linear-gradient(180deg,#f3f7fd 0%,#eef4fb 50%,#f4f8fd 100%)}
-.sec-bg{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
-.track{--gap:22px;--per:2;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));gap:var(--gap);margin:0;padding:6px 4px 16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.track::-webkit-scrollbar{display:none}
-.svc{scroll-snap-align:start;display:grid;grid-template-columns:42% 1fr;padding:12px;border:1px solid #dbe5f1;border-radius:18px;background:#fff;box-shadow:0 18px 36px -24px rgba(10,43,87,.35);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
-.svc:hover{transform:translateY(-5px);box-shadow:0 28px 48px -26px rgba(10,43,87,.45);border-color:var(--blue-200)}
-.svc .media{min-height:300px;border-radius:12px}
-.svc .media::after{content:"";position:absolute;left:0;bottom:0;width:76px;height:76px;background:linear-gradient(45deg,var(--blue-600) 50%,transparent 50.5%);pointer-events:none}
-.svc-body{display:flex;flex-direction:column;padding:16px 14px 10px 24px}
-.chip{align-self:flex-start;padding:3px 12px;border-radius:999px;background:var(--blue-100);font-size:12.5px;font-weight:800;letter-spacing:.02em;color:var(--blue-700)}
-.chip.red{background:#fde6ea;color:var(--red-700)}
-.svc h3{margin:12px 0 8px;font-size:clamp(21px,1.7vw,24px);line-height:1.2;color:var(--blue-700)}
-.svc p{font-size:15px;line-height:1.6;color:var(--muted)}
-.svc .spec{margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted)}
-.svc .spec b{color:var(--ink);font-weight:700}
-.checks{display:grid;gap:8px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
-.svc p+.checks{margin-top:16px}
-.checks li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;font-weight:600;color:var(--ink)}
-.checks li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--blue-600) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L19 7'/%3E%3C/svg%3E") center/11px no-repeat}
-.car-ctrl{display:flex;align-items:center;gap:16px;max-width:520px;margin:18px auto 0}
-.car-prog{flex:1;min-width:0}
-.car-count{display:block;margin-bottom:8px;font-size:14px;font-weight:600;color:var(--muted);text-align:center}
-.ctrl{display:grid;place-items:center;width:46px;height:46px;flex:none;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--blue-700);box-shadow:0 8px 18px -8px rgba(10,43,87,.3);transition:background-color .2s,border-color .2s,color .2s,opacity .2s}
-.ctrl .ico{width:18px;height:18px;stroke-width:2.4}
-.ctrl.prev .ico{transform:scaleX(-1)}
-.ctrl:hover:not(:disabled){background:var(--blue-700);border-color:var(--blue-700);color:#fff}
-.ctrl:disabled{opacity:.45;cursor:default;box-shadow:none}
-.progress{position:relative;height:5px;border-radius:5px;background:var(--blue-100);overflow:hidden}
-.progress span{position:absolute;top:0;bottom:0;left:0;width:50%;border-radius:5px;background:var(--blue-600);transition:transform .2s linear,width .2s}
-
 /* ---------- Vitrine (abas Parker / Ingersoll Rand) ---------- */
 .shop{background:#fff}
 .tabs{display:flex;justify-content:center;gap:12px;margin:0 auto clamp(28px,3vw,40px)}
@@ -416,8 +385,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ---------- Divisores arredondados entre seções (mesmo efeito do site) ---------- */
 .stack{margin-top:calc(var(--round) * -1);padding-top:calc(var(--sec-pad) + var(--round));border-radius:0 0 var(--round) var(--round);box-shadow:0 34px 50px -40px rgba(10,43,87,.3)}
-.lines{z-index:8;border-radius:0 0 var(--round) var(--round);box-shadow:0 34px 50px -40px rgba(10,43,87,.35)}
-.shop{z-index:7}.sys{z-index:6}.flow-sec{z-index:5}.dif-section{z-index:4;box-shadow:none}.faq{z-index:3}
+.shop{z-index:7;border-radius:0 0 var(--round) var(--round);box-shadow:0 34px 50px -40px rgba(10,43,87,.35)}.sys{z-index:6}.flow-sec{z-index:5}.dif-section{z-index:4;box-shadow:none}.faq{z-index:3}
 .talk{z-index:2;margin-top:calc(var(--round) * -1);padding-top:var(--round);border-radius:0 0 var(--round) var(--round)}
 .site-footer{z-index:0;margin-top:calc(var(--round) * -1);padding-top:var(--round)}
 
@@ -440,8 +408,6 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero-panel{left:50%}
   .hero-stripe{left:calc(50% - 14px)}
   .hero-points{grid-template-columns:1fr 1fr}
-  .track{--per:1}
-  .svc{grid-template-columns:40% 1fr}
   .prod-grid{grid-template-columns:repeat(3,1fr)}
   .flow{grid-template-columns:repeat(2,1fr)}
   .chain{grid-template-columns:repeat(3,1fr);row-gap:28px}
@@ -484,10 +450,6 @@ ul,ol{margin:0;padding:0;list-style:none}
   .chat{height:470px}
   .section-head p,.head-left p{font-size:15.5px}
   .eyebrow{font-size:11px;letter-spacing:.14em}
-  .svc{grid-template-columns:1fr}
-  .svc .media{min-height:0;aspect-ratio:16/10}
-  .svc-body{padding:16px 8px 8px}
-  .track{--gap:12px}
   .tabs{flex-direction:column;align-items:stretch}
   .group-head p{padding-left:0}
   .group-head h3{gap:12px}
@@ -540,7 +502,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .track{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
 }
@@ -576,7 +537,6 @@ ul,ol{margin:0;padding:0;list-style:none}
   <nav class="wrap nav" aria-label="Navegação principal">
     <a href="#topo" aria-label="Vazão Engenharia e Montagem — início"><img class="brand" src="assets/logo-vazao.webp" alt="Vazão Engenharia e Montagem" width="230" height="72"></a>
     <div class="nav-links">
-      <a href="#linhas">Linhas</a>
       <a href="#produtos">Produtos</a>
       <a href="#etapas">Como funciona</a>
       <a href="#faq">Dúvidas</a>
@@ -628,76 +588,8 @@ ul,ol{margin:0;padding:0;list-style:none}
     </div>
   </section>
 
-  <!-- LINHAS DE PRODUTO -->
-  <section class="section lines" id="linhas" aria-labelledby="lines-title">
-    <svg class="sec-bg" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMin slice" aria-hidden="true" fill="none">
-      <g stroke="#b7cbe6" stroke-width="1" opacity=".7">
-        <path d="M-20 420C200 360 380 520 620 470S1020 360 1460 420"/><path d="M-20 450C200 390 380 550 620 500S1020 390 1460 450"/><path d="M-20 480C200 420 380 580 620 530S1020 420 1460 480"/>
-        <path d="M1000 40C1150 80 1250 20 1460 60"/><path d="M1000 70C1150 110 1250 50 1460 90"/>
-      </g>
-      <g stroke="#7fa3d6" stroke-width="1.2" opacity=".6">
-        <circle cx="1275" cy="210" r="38"/><path d="M1275 160v100M1225 210h100"/>
-        <path d="M1105 54v24M1093 66h24M388 130v20M378 140h20M30 400v20M20 410h20M1395 600v20M1385 610h20M1220 820v20M1210 830h20"/>
-      </g>
-    </svg>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Filtros · Secadores · Tubulação</span>
-        <h2 id="lines-title">Linhas para <em>ar limpo, seco</em> e bem distribuído</h2>
-        <p>Tratamento de ar comprimido industrial com secadores e filtros Parker, e rede de ar comprimido em alumínio SimplAir da Ingersoll Rand.</p>
-      </div>
-      <div class="carousel reveal" data-label="linhas">
-        <ul class="track" tabindex="0" aria-label="Linhas de produto">
-          <li class="svc">
-            <div class="media" data-img="assets/linha-filtros-oil-x.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div>
-            <div class="svc-body">
-              <span class="chip">Domnick Hunter</span>
-              <h3>Filtros Coalescentes OIL-X</h3>
-              <p>Remoção de aerossóis de óleo e água e de partículas sólidas, com tecnologia Parker Domnick Hunter.</p>
-              <ul class="checks"><li>Proteção dos equipamentos</li><li>Diferentes graus de filtragem</li><li>Baixa perda de carga</li></ul>
-            </div>
-          </li>
-          <li class="svc">
-            <div class="media" data-img="assets/linha-secadores-pse.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div>
-            <div class="svc-body">
-              <span class="chip">Parker</span>
-              <h3>Secadores PSE por Refrigeração</h3>
-              <p>Controle da umidade do ar comprimido com foco em eficiência energética.</p>
-              <ul class="checks"><li>Eficiência energética</li><li>Baixa perda de pressão</li><li>Controle do ponto de orvalho</li></ul>
-            </div>
-          </li>
-          <li class="svc">
-            <div class="media" data-img="assets/linha-secadores-adsorcao.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
-            <div class="svc-body">
-              <span class="chip">Parker</span>
-              <h3>Secadores por Adsorção CDAS HL e K-MT</h3>
-              <p>Ar mais seco para aplicações que exigem pontos de orvalho mais baixos.</p>
-              <ul class="checks"><li>Secagem por material dessecante</li><li>Pontos de orvalho mais baixos</li><li>Linhas CDAS HL e K-MT</li></ul>
-            </div>
-          </li>
-          <li class="svc">
-            <div class="media" data-img="assets/linha-tubulacao-simplair.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-pipe"/></svg></div>
-            <div class="svc-body">
-              <span class="chip red">Ingersoll Rand</span>
-              <h3>Tubulação SimplAir</h3>
-              <p>Rede de ar comprimido em alumínio, resistente à corrosão e fácil de ampliar.</p>
-              <p class="spec">Alumínio <b>AA6063-T5</b> · normas <b>ASME B31.1 e B31.3</b> · 55% mais leve que outras soluções em alumínio · ar comprimido, vácuo, nitrogênio e gases inertes.</p>
-              <ul class="checks"><li>Até 230 psi</li><li>Diâmetros de 20 a 273 mm</li><li>Garantia vitalícia</li></ul>
-            </div>
-          </li>
-        </ul>
-        <div class="car-ctrl">
-          <button type="button" class="ctrl prev" aria-label="Linha anterior"><svg class="ico"><use href="#i-arrow"/></svg></button>
-          <div class="car-prog"><span class="car-count" aria-live="polite"></span><div class="progress"><span></span></div></div>
-          <button type="button" class="ctrl next" aria-label="Próxima linha"><svg class="ico"><use href="#i-arrow"/></svg></button>
-        </div>
-      </div>
-      <div class="cta-row"><a href="#cotacao" class="btn" data-cta="linhas">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a></div>
-    </div>
-  </section>
-
   <!-- VITRINE -->
-  <section class="section shop stack" id="produtos" aria-labelledby="shop-title">
+  <section class="section shop" id="produtos" aria-labelledby="shop-title">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Produtos</span>
@@ -1002,11 +894,11 @@ ul,ol{margin:0;padding:0;list-style:none}
       </div>
       <div>
         <h4>Navegação</h4>
-        <ul><li><a href="#linhas">Linhas</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#etapas">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul>
+        <ul><li><a href="#produtos">Produtos</a></li><li><a href="#etapas">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul>
       </div>
       <div>
         <h4>Produtos</h4>
-        <ul><li><a href="#linhas">Filtros OIL-X</a></li><li><a href="#linhas">Secadores PSE</a></li><li><a href="#linhas">Secadores CDAS HL e K-MT</a></li><li><a href="#linhas">Tubulação SimplAir</a></li></ul>
+        <ul><li><a href="#produtos">Filtros OIL-X</a></li><li><a href="#produtos">Secadores PSE</a></li><li><a href="#produtos">Secadores CDAS HL e K-MT</a></li><li><a href="#produtos">Tubulação SimplAir</a></li></ul>
       </div>
       <div>
         <h4>Contato</h4>
@@ -1111,34 +1003,9 @@ document.querySelectorAll('[data-logo]').forEach(function(box){
     var secSpy = new IntersectionObserver(function(es){ es.forEach(function(e){
       if (e.isIntersecting) topLinks.forEach(function(a){ a.classList.toggle('active', a.hash === '#' + e.target.id); });
     }); }, {rootMargin:'-40% 0px -55% 0px'});
-    ['linhas','produtos','sistema','etapas','diferenciais','faq','cotacao'].forEach(function(id){ var el = document.getElementById(id); if (el) secSpy.observe(el); });
+    ['produtos','sistema','etapas','diferenciais','faq','cotacao'].forEach(function(id){ var el = document.getElementById(id); if (el) secSpy.observe(el); });
     new IntersectionObserver(function(en){ if (en[0].isIntersecting) topLinks.forEach(function(a){ a.classList.remove('active'); }); }, {rootMargin:'-40% 0px -55% 0px'}).observe($('.hero'));
   }
-
-  // Carrossel das linhas (2 por vez no desktop, 1 no tablet/celular)
-  $$('.carousel').forEach(function(car){
-    var track = $('.track', car), prev = $('.prev', car), next = $('.next', car), bar = $('.progress span', car), count = $('.car-count', car);
-    var items = track.children;
-    var gap = function(){ return parseFloat(getComputedStyle(track).columnGap) || 0; };
-    var perView = function(){ return Math.max(1, Math.round((track.clientWidth + gap()) / (items[0].offsetWidth + gap()))); };
-    var stepPx = function(){ return items[0].offsetWidth + gap(); };
-    var update = function(){
-      var max = track.scrollWidth - track.clientWidth;
-      prev.disabled = track.scrollLeft <= 2;
-      next.disabled = track.scrollLeft >= max - 2;
-      var ratio = track.scrollWidth ? track.clientWidth / track.scrollWidth : 1;
-      bar.style.width = (ratio * 100) + '%';
-      bar.style.transform = 'translateX(' + (max > 0 ? (track.scrollLeft / max) * ((1 / ratio) - 1) * 100 : 0) + '%)';
-      var first = Math.round(track.scrollLeft / stepPx()) + 1, pv = perView();
-      var last = Math.min(items.length, first + pv - 1);
-      count.textContent = (pv > 1 ? first + '–' + last : first) + ' de ' + items.length + ' linhas';
-    };
-    prev.addEventListener('click', function(){ track.scrollBy({left: -stepPx()}); });
-    next.addEventListener('click', function(){ track.scrollBy({left: stepPx()}); });
-    track.addEventListener('scroll', update, {passive:true});
-    addEventListener('resize', update);
-    update();
-  });
 
   // Abas da vitrine (Parker / Ingersoll Rand), com navegação por setas
   var tabs = $$('[role="tab"]');
