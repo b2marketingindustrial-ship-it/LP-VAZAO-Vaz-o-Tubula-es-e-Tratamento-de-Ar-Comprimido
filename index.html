@@ -193,17 +193,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* Fotos de catálogo (produto em fundo branco): mostra inteira, sem cortar */
 .media.fit.loaded{background-color:#fff;background-size:contain;background-repeat:no-repeat;background-origin:content-box;padding:14px}
 
-/* ---------- Vitrine (abas Parker / Ingersoll Rand) ---------- */
+/* ---------- Vitrine ---------- */
 .shop{background:#fff}
-.tabs{display:flex;justify-content:center;gap:12px;margin:0 auto clamp(28px,3vw,40px)}
-.tab{display:flex;align-items:center;gap:14px;min-height:64px;padding:8px 22px 8px 10px;border:1.5px solid var(--line-strong);border-radius:16px;background:#fff;color:var(--blue-700);font-weight:700;text-align:left;box-shadow:var(--sh-sm);transition:border-color .2s,box-shadow .2s,background-color .2s}
-.tab:hover{border-color:var(--blue-500)}
-.tab[aria-selected="true"]{border-color:var(--blue-700);background:var(--blue-50);box-shadow:0 0 0 1px var(--blue-700),0 14px 30px -18px rgba(11,63,138,.55)}
-.tab small{display:block;font-size:12.5px;font-weight:600;color:var(--muted)}
-.logo-box{display:grid;place-items:center;width:108px;height:44px;flex:none;border-radius:10px;background:#fff;border:1px solid var(--line);overflow:hidden}
-.logo-box img{max-width:92%;max-height:80%;object-fit:contain}
-.logo-box .wm{font-size:14px;font-weight:800;letter-spacing:-.01em;color:var(--navy-800);white-space:nowrap}
-.logo-box .wm.ir{font-size:11.5px;letter-spacing:.02em}
 .group-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin-bottom:28px}
 .group-head h3{display:flex;align-items:center;gap:18px;font-size:clamp(24px,2.5vw,36px);line-height:1.15;letter-spacing:-.035em;color:var(--blue-700)}
 .group-head h3::before{content:"";flex:none;width:50px;height:3px;border-radius:2px;background:var(--red-600)}
@@ -450,7 +441,6 @@ ul,ol{margin:0;padding:0;list-style:none}
   .chat{height:470px}
   .section-head p,.head-left p{font-size:15.5px}
   .eyebrow{font-size:11px;letter-spacing:.14em}
-  .tabs{flex-direction:column;align-items:stretch}
   .group-head p{padding-left:0}
   .group-head h3{gap:12px}
   .group-head h3::before{width:28px}
@@ -597,35 +587,7 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p>Escolha o equipamento e solicite a cotação. A equipe técnica confirma o modelo pela vazão, pressão e qualidade de ar da sua aplicação.</p>
       </div>
 
-      <div class="tabs reveal" role="tablist" aria-label="Marcas">
-        <button type="button" class="tab" role="tab" id="tab-parker" aria-controls="pnl-parker" aria-selected="true">
-          <span class="logo-box" data-logo="assets/logo-parker.png?v=2"><span class="wm">Parker</span></span>
-          <span>Soluções Parker<small>8 produtos</small></span>
-        </button>
-        <button type="button" class="tab" role="tab" id="tab-ir" aria-controls="pnl-ir" aria-selected="false" tabindex="-1">
-          <span class="logo-box" data-logo="assets/logo-ingersoll-rand.png?v=2"><span class="wm ir">INGERSOLL RAND</span></span>
-          <span>Ingersoll Rand<small>15 produtos</small></span>
-        </button>
-      </div>
-
-      <div class="panel reveal" role="tabpanel" id="pnl-parker" aria-labelledby="tab-parker">
-        <div class="group-head">
-          <div><h3>Soluções Parker para tratamento de ar</h3><p>Filtros coalescentes OIL-X com tecnologia Domnick Hunter e secadores PSE, CDAS HL e K-MT.</p></div>
-          <a href="#cotacao" class="btn btn-sm" data-cta="vitrine-parker" data-linha="Mais de um / não sei" data-produto="Linha Parker">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
-        </div>
-        <ul class="prod-grid">
-          <li class="prod feat"><div class="media" data-img="assets/produtos/parker-filtro-coalescente-oil-x.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtro coalescente OIL-X</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod feat"><div class="media" data-img="assets/produtos/parker-secador-refrigeracao-pse.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por refrigeração PSE</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod feat"><div class="media" data-img="assets/produtos/parker-secador-adsorcao-cdas-hl.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção CDAS HL</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod feat"><div class="media" data-img="assets/produtos/parker-secador-adsorcao-k-mt.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção K-MT</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media" data-img="assets/produtos/parker-elemento-coalescente.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Elemento coalescente</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media" data-img="assets/produtos/parker-filtro-aco-carbono.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtro de aço carbono</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media" data-img="assets/produtos/parker-filtro-carvao-ativado.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtro de ar com carvão ativado</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media" data-img="assets/produtos/parker-filtro-alta-pressao.jpg?v=2"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtro de ar de alta pressão</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-        </ul>
-      </div>
-
-      <div class="panel" role="tabpanel" id="pnl-ir" aria-labelledby="tab-ir" hidden>
+      <div class="panel reveal" id="pnl-ir">
         <div class="group-head">
           <div><h3>Distribuidor Ingersoll Rand</h3><p>Tubulação SimplAir, secadores, filtros coalescentes, drenos sem perda e separadores PolySep.</p></div>
           <a href="#cotacao" class="btn btn-sm" data-cta="vitrine-ir" data-linha="Mais de um / não sei" data-produto="Linha Ingersoll Rand">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
@@ -965,12 +927,7 @@ document.querySelectorAll('[data-img]').forEach(function(el){
 });
 var heroCard = document.querySelector('[data-hero-img]');
 tryImg(heroCard.getAttribute('data-hero-img'), function(s){ heroCard.style.setProperty('--hero-img','url("'+s+'")'); heroCard.classList.add('has-img'); });
-/* Logos das marcas: o nome em texto é trocado pela logo quando o arquivo existir */
-document.querySelectorAll('[data-logo]').forEach(function(box){
-  tryImg(box.getAttribute('data-logo'), function(s){ var im = document.createElement('img'); im.src = s; im.alt = box.textContent.trim(); box.innerHTML = ''; box.appendChild(im); });
-});
-
-/* Interface: header, animações, CTA fixo, menu ativo, carrossel, abas */
+/* Interface: header, animações, CTA fixo, menu ativo, */
 (function(){
   var $ = function(s, c){ return (c||document).querySelector(s); };
   var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
@@ -1007,23 +964,6 @@ document.querySelectorAll('[data-logo]').forEach(function(box){
     new IntersectionObserver(function(en){ if (en[0].isIntersecting) topLinks.forEach(function(a){ a.classList.remove('active'); }); }, {rootMargin:'-40% 0px -55% 0px'}).observe($('.hero'));
   }
 
-  // Abas da vitrine (Parker / Ingersoll Rand), com navegação por setas
-  var tabs = $$('[role="tab"]');
-  function select(t){
-    tabs.forEach(function(x){
-      var on = x === t;
-      x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
-      var p = document.getElementById(x.getAttribute('aria-controls')); p.hidden = !on;
-      if (on) $$('.reveal', p).concat([p]).forEach(function(el){ el.classList.add('in'); });
-    });
-  }
-  tabs.forEach(function(t, i){
-    t.addEventListener('click', function(){ select(t); dataLayer.push({event:'vitrine_aba', marca:t.id}); });
-    t.addEventListener('keydown', function(e){
-      var d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
-      if (!d) return; e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus();
-    });
-  });
 })();
 
 /* Cliques em CTA (produto da vitrine já entra preenchido no formulário) */
