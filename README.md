@@ -9,7 +9,7 @@ Regras de texto: Parker aparece só como "soluções Parker" (nunca distribuidor
 ## Estrutura
 
 - `index.html`: página única e autocontida (HTML, CSS e JS inline), mesma identidade visual da LP NR13 e do site da Vazão.
-- Seções: topo com chat · linhas de produto (carrossel) · vitrine com abas Parker / Ingersoll Rand (23 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
+- Seções: topo com chat · vitrine Ingersoll Rand (23 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
 - O botão "Solicitar cotação" de cada produto já preenche **Interesse** e **Produto** no formulário.
 
 ## Imagens (`assets/`)
@@ -19,34 +19,36 @@ Todas entram **sozinhas** quando o arquivo for adicionado com o nome exato. Até
 | Arquivo | Onde aparece | Tamanho |
 |---|---|---|
 | `logo-vazao.webp` (já incluída) | topo e rodapé | 230×72 |
-| `logo-parker.png` | aba Parker da vitrine | 400×160, fundo transparente |
-| `logo-ingersoll-rand.png` | aba Ingersoll Rand da vitrine | 400×160, fundo transparente |
 | `banner-topo.jpg` (já incluída) | foto do topo, atrás do chat | 1200×900 |
 | `cta-fundo.jpg` (já incluída) | foto do banner azul | 800×724 |
-| `linha-filtros-oil-x.jpg` (já incluída) | linha Filtros OIL-X | 800×600 |
-| `linha-secadores-pse.jpg` (já incluída) | linha Secadores PSE | 800×600 |
-| `linha-secadores-adsorcao.jpg` (já incluída) | linha CDAS HL e K-MT | 800×600 |
-| `linha-tubulacao-simplair.jpg` (já incluída) | linha SimplAir | 800×600 |
 
-Fotos da vitrine em `assets/produtos/`. As 8 da Parker já estão incluídas (imagens ilustrativas, 2:1 com fundo azul-claro). As da Ingersoll Rand: 800×600, produto recortado em fundo branco.
+Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×600, produto recortado em fundo branco. Entram sozinhas quando o arquivo for adicionado com o nome exato.
 
-| Parker | Ingersoll Rand |
+| Produto | Arquivo |
 |---|---|
-| `parker-filtro-coalescente-oil-x.jpg` | `ir-tubulacao-aluminio-simplair.jpg` |
-| `parker-secador-refrigeracao-pse.jpg` | `ir-secadores-refrigeracao.jpg` |
-| `parker-secador-adsorcao-cdas-hl.jpg` | `ir-separadores-polysep.jpg` |
-| `parker-secador-adsorcao-k-mt.jpg` | `ir-dreno-liquidator.jpg` |
-| `parker-elemento-coalescente.jpg` | `ir-drenos-eletronicos.jpg` |
-| `parker-filtro-aco-carbono.jpg` | `ir-drenos-pnld-ii.jpg` |
-| `parker-filtro-carvao-ativado.jpg` | `ir-filtros-coalescentes-aco-carbono.jpg` |
-| `parker-filtro-alta-pressao.jpg` | `ir-filtros-coalescentes-serie-f.jpg` |
-| | `ir-secador-adsorcao-sem-aquecimento.jpg` |
-| | `ir-secador-adsorcao-hoc-1088.jpg` |
-| | `ir-secador-adsorcao-hoc-1191.jpg` |
-| | `ir-secador-adsorcao-4-226.jpg` |
-| | `ir-secador-adsorcao-ventilador.jpg` |
-| | `ir-secador-adsorcao-d-ila.jpg` |
-| | `ir-secador-adsorcao-hl.jpg` |
+| Tubulação alumínio SimplAir | `ir-tubulacao-aluminio-simplair.jpg` |
+| Separadores óleo-água PolySep | `ir-separadores-polysep.jpg` |
+| Dreno sem perdas Liquidator | `ir-dreno-liquidator.jpg` |
+| Drenos eletrônicos sem perda | `ir-drenos-eletronicos.jpg` |
+| Drenos sem perda (PNLD II) | `ir-drenos-pnld-ii.jpg` |
+| Filtros coalescentes aço carbono | `ir-filtros-coalescentes-aco-carbono.jpg` |
+| Filtros coalescentes Série F | `ir-filtros-coalescentes-serie-f.jpg` |
+| Secador por adsorção sem aquecimento | `ir-secador-adsorcao-sem-aquecimento.jpg` |
+| Secador por adsorção (HOC) 1.088/23.703 m³/h | `ir-secador-adsorcao-hoc-1088.jpg` |
+| Secador por adsorção (HOC) 1.191/24.119 m³/h | `ir-secador-adsorcao-hoc-1191.jpg` |
+| Secador por adsorção 4,2 a 226 m³/min | `ir-secador-adsorcao-4-226.jpg` |
+| Secador por adsorção com ventilador 4,2 a 226 m³/min | `ir-secador-adsorcao-ventilador.jpg` |
+| Secador por adsorção D-ILA | `ir-secador-adsorcao-d-ila.jpg` |
+| Secador por adsorção HL | `ir-secador-adsorcao-hl.jpg` |
+| Secador por adsorção modular | `ir-secador-adsorcao-modular.jpg` |
+| Secador por adsorção ponto de uso | `ir-secador-adsorcao-ponto-de-uso.jpg` |
+| Secadores por adsorção HOC 420/3.680 m³/h | `ir-secadores-adsorcao-hoc-420.jpg` |
+| Secadores por adsorção HLA | `ir-secadores-adsorcao-hla.jpg` |
+| Secador por refrigeração 10–150 cfm | `ir-secador-refrigeracao-10-150-cfm.jpg` |
+| Secadores por refrigeração 3.600 a 24.000 CFM | `ir-secadores-refrigeracao-3600-24000-cfm.jpg` |
+| Secadores por refrigeração Nirvana | `ir-secadores-refrigeracao-nirvana.jpg` |
+| Secadores por refrigeração sem ciclo | `ir-secadores-refrigeracao-sem-ciclo.jpg` |
+| Secadores por refrigeração Série DA | `ir-secadores-refrigeracao-serie-da.jpg` |
 
 ## Configuração (bloco `CONFIG` no fim do `index.html`)
 
