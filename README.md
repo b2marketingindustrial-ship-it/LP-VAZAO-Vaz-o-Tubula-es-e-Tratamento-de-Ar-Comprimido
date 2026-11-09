@@ -22,7 +22,7 @@ Todas entram **sozinhas** quando o arquivo for adicionado com o nome exato. Até
 | `banner-topo.jpg` (já incluída) | foto do topo, atrás do chat | 1200×900 |
 | `cta-fundo.jpg` (já incluída) | foto do banner azul | 800×724 |
 
-Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto em fundo branco, recortadas dos prints do site da Vazão. A da SimplAir é foto de ambiente. Entram sozinhas quando o arquivo for adicionado com o nome exato.
+Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto em fundo branco, recortadas dos prints do site da Vazão. Entram sozinhas quando o arquivo for adicionado com o nome exato.
 
 | Produto | Arquivo |
 |---|---|
