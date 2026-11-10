@@ -1,6 +1,6 @@
 # LP Tratamento de Ar Comprimido e Rede de Ar Comprimido — Vazão Engenharia
 
-Landing page de produto e serviço da **Vazão Engenharia e Montagem** para indústrias de Pernambuco e Ceará.
+Landing page de produto e serviço da **Vazão Engenharia e Montagem** para indústrias de todo o Nordeste.
 Recebe o tráfego dos grupos **NOVO 1 — Tubulação de Ar** e **NOVO 2 — Tratamento de Ar** da campanha *[PES] Compressores - Nova* (Google Ads).
 Palavras-chave principais: **tratamento de ar comprimido** + **rede de ar comprimido** (as duas no H1 e no título da aba).
 
