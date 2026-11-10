@@ -19,7 +19,8 @@ Todas entram **sozinhas** quando o arquivo for adicionado com o nome exato. Até
 | Arquivo | Onde aparece | Tamanho |
 |---|---|---|
 | `logo-vazao.webp` (já incluída) | topo e rodapé | 230×72 |
-| `banner-topo.jpg` (já incluída) | foto do topo, atrás do chat | 1200×900 |
+| `logo-ingersoll-rand.png` (já incluída) | topo, ao lado do logo da Vazão | 476×100 |
+| `hero-ir.webp` / `hero-ir.jpg` (já incluídas) | foto do topo (hero), à direita do texto | 1659×948 |
 | `cta-fundo.jpg` (já incluída) | foto do banner azul | 800×724 |
 
 Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto em fundo branco, recortadas dos prints do site da Vazão. Entram sozinhas quando o arquivo for adicionado com o nome exato.

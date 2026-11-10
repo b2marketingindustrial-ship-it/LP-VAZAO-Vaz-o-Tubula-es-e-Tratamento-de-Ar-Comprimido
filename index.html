@@ -16,6 +16,7 @@
 <meta property="og:description" content="Filtros, secadores e drenos Parker e Ingersoll Rand, tubulação SimplAir e engenharia do projeto à instalação. Atendemos Pernambuco e Ceará.">
 <meta property="og:url" content="https://vazao.b2marketingindustrial.com.br/tratamento-de-ar-comprimido/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/hero-ir.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,7 +126,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
 .site-header.scrolled{border-color:var(--line);box-shadow:0 8px 24px -18px rgba(10,43,87,.35)}
 .nav{height:76px;display:flex;align-items:center;gap:20px}
-.brand{width:138px;height:auto}
+.brand{width:168px;height:auto}
+.brand-sep{width:1px;height:34px;flex:none;background:var(--line-strong)}
+.brand-ir{width:clamp(150px,13vw,224px);height:auto}
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:clamp(18px,2.2vw,36px)}
 .nav-links a:not(.btn){position:relative;padding:10px 0 12px;font-size:15px;font-weight:600;letter-spacing:-.01em;color:var(--blue-700);transition:color .2s}
 .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;border-radius:2px;background:var(--blue-100);transition:background-color .25s}
@@ -136,54 +139,25 @@ ul,ol{margin:0;padding:0;list-style:none}
 .nav-links .btn{margin-left:clamp(4px,1vw,16px)}
 
 /* ---------- Hero ---------- */
-.hero{padding:12px 16px 0}
-.hero-card{position:relative;max-width:1568px;margin:0 auto;min-height:clamp(600px,46vw,700px);display:flex;align-items:center;border-radius:var(--r-xl);overflow:hidden;background:#fff;isolation:isolate;box-shadow:inset 0 0 0 1px var(--line)}
-.hero-lines{position:absolute;inset:0;z-index:-2;width:100%;height:100%;pointer-events:none}
-.hero-panel{position:absolute;top:0;bottom:0;left:48%;right:0;z-index:-1;background:linear-gradient(120deg,#082b5e 0%,#0a3478 60%,#0b3f8a 100%);clip-path:polygon(120px 0,100% 0,100% 100%,0 100%)}
-.hero-panel::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(120,170,255,.08) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(120,170,255,.08) 1px,transparent 1px) 0 0/34px 34px}
-.hero-panel::after{content:"";position:absolute;right:-80px;bottom:-120px;width:360px;height:360px;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 30px,rgba(255,255,255,.07) 30px 31px)}
-.hero-card.has-img .hero-panel{background:linear-gradient(90deg,rgba(8,43,94,.12) 0%,rgba(8,43,94,0) 40%),var(--hero-img) left center/cover no-repeat}
-.hero-card.has-img .hero-panel::before,.hero-card.has-img .hero-panel::after{display:none}
-.hero-stripe{position:absolute;top:0;bottom:0;left:calc(48% - 14px);z-index:-1;width:150px;background:var(--red-600);clip-path:polygon(120px 0,128px 0,8px 100%,0 100%)}
-.hero-inner{width:min(1440px,100% - 2*clamp(28px,4.5vw,72px));margin-inline:auto;padding:56px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:clamp(40px,6vw,96px);align-items:center}
-.hero-copy{max-width:540px}
-.hero-copy .eyebrow{color:var(--blue-700)}
+.hero{position:relative;display:flex;align-items:center;min-height:clamp(580px,44vw,720px);overflow:hidden;isolation:isolate;background:#f3f6fb}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;z-index:-2;width:min(1280px,74%);height:100%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:right bottom}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#f3f6fb 0%,#f3f6fb 30%,rgba(243,246,251,.94) 37%,rgba(243,246,251,.6) 45%,rgba(243,246,251,0) 55%)}
+.hero-arc{position:absolute;top:0;bottom:0;left:calc(26% + 120px);z-index:-1;width:260px;height:100%;pointer-events:none}
+.hero-inner{position:relative;width:min(1440px,100% - 2*clamp(28px,4.5vw,72px));margin-inline:auto;padding:64px 0 76px}
+.hero-copy{max-width:600px}
+.hero-copy .eyebrow{color:var(--blue-700);font-size:13px;letter-spacing:.2em}
 .hero-copy .eyebrow::before{display:none}
-.hero-copy .eyebrow::after{width:44px;background:var(--red-600)}
-.hero h1{margin:20px 0 20px;font-size:clamp(34px,3.4vw,52px);line-height:1.06;letter-spacing:-.035em;color:var(--blue-700)}
+.hero-copy .eyebrow::after{width:56px;background:var(--red-600)}
+.hero h1{margin:26px 0 22px;font-size:clamp(38px,3.9vw,62px);line-height:1.03;letter-spacing:-.035em;color:var(--blue-700)}
 .hero h1 .accent{color:var(--red-600)}
-.hero-lead{max-width:540px;font-size:clamp(16px,1.2vw,18px);line-height:1.65;color:var(--text)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero-points{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 22px;margin-top:36px;padding-top:22px;border-top:1px solid var(--line)}
-.hero-points li{display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.3;color:var(--muted)}
-.hero-points li+li{padding-left:22px;border-left:1px solid var(--line-strong)}
-.hero-points .ico{width:28px;height:28px;color:var(--blue-600);stroke-width:1.5}
-.hero-points b{display:block;font-size:15px;font-weight:700;letter-spacing:-.01em;color:var(--blue-700)}
-.area{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;font-weight:500;color:var(--muted)}
-.area .ico{width:18px;height:18px;color:var(--red-600)}
-
-/* ---------- Chat ---------- */
-.chat{position:relative;display:flex;flex-direction:column;height:520px;border-radius:var(--r-lg);overflow:hidden;background:#fff;color:var(--ink);box-shadow:0 40px 80px -30px rgba(3,15,35,.6),0 0 0 1px rgba(255,255,255,.08)}
-.chat-h{display:flex;align-items:center;gap:12px;padding:16px 18px;background:linear-gradient(120deg,#082b5e,#0b3f8a);color:#fff;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,var(--red-600) 0 40%,var(--blue-500) 40% 100%) 1}
-.chat-h .av{display:grid;place-items:center;width:40px;height:40px;flex:none;border-radius:50%;background:#fff;color:var(--blue-700);font-weight:800;font-size:18px;box-shadow:0 0 0 3px rgba(255,255,255,.2)}
-.chat-h p{font-size:14.5px;font-weight:700;line-height:1.25}
-.chat-h span{display:block;font-size:12px;font-weight:500;color:#c4d6f0}
-.chat-h .on{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#d6e4f7}
-.chat-h .on i{display:block;width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.25)}
-.chat-b{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:18px 16px;background:var(--grid-bg)}
-.msg{max-width:84%;padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.45;animation:pop .25s var(--ease)}
-.msg.bot{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;box-shadow:var(--sh-sm)}
-.msg.me{align-self:flex-end;background:var(--blue-600);color:#fff;border-bottom-right-radius:4px}
-@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.opts{align-self:flex-start;display:flex;flex-wrap:wrap;gap:8px}
-.opts button{padding:7px 13px;border:1px solid var(--blue-200);border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:var(--blue-700);transition:background-color .2s,border-color .2s}
-.opts button:hover{background:var(--blue-50);border-color:var(--blue-500)}
-.chat-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fff}
-.chat-f input{flex:1;min-width:0;padding:10px 12px;border:1px solid var(--line-strong);border-radius:10px;font-size:15px}
-.chat-f input:focus{outline:2px solid var(--blue-500);border-color:transparent}
-.chat-f button{padding:0 18px;border:0;border-radius:10px;background:var(--red-600);color:#fff;font-size:14px;font-weight:700;transition:background-color .2s}
-.chat-f button:hover{background:var(--red-700)}
-.chat-done{padding:16px;text-align:center;background:#eaf6ee;color:var(--green-600);font-size:14px;font-weight:600;border-top:1px solid #cfe8d8}
+.hero-lead{max-width:540px;font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:var(--text)}
+.hero-points{display:flex;flex-wrap:wrap;gap:14px 0;margin-top:36px}
+.hero-points li{display:flex;align-items:center;gap:12px;margin-right:22px;padding-right:22px;border-right:1px solid var(--line-strong);font-size:14.5px;font-weight:600;line-height:1.3;color:var(--blue-700)}
+.hero-points li:last-child{margin-right:0;padding-right:0;border-right:0}
+.hero-points .ico{width:34px;height:34px;flex:none;color:var(--blue-700);stroke-width:1.4}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-actions .btn{min-height:58px;padding:0 30px;font-size:16px}
 
 /* ---------- Mídia com placeholder (a foto entra sozinha quando existir em assets/) ---------- */
 .media{position:relative;display:grid;place-items:center;overflow:hidden;color:var(--blue-500);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 28v8M28 32h8' stroke='%232468cc' stroke-opacity='.28' stroke-width='1'/%3E%3C/svg%3E") center/64px 64px,var(--grid-bg)}
@@ -395,10 +369,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   .footer-brand{grid-column:1/-1;padding:0 0 32px;border-right:0;border-bottom:1px solid rgba(124,160,220,.3)}
 }
 @media (max-width:1080px){
-  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:40px}
-  .hero-panel{left:50%}
-  .hero-stripe{left:calc(50% - 14px)}
-  .hero-points{grid-template-columns:1fr 1fr}
+  .hero-photo{width:80%}
+  .hero::before{background:linear-gradient(90deg,#f3f6fb 0%,#f3f6fb 34%,rgba(243,246,251,.9) 44%,rgba(243,246,251,0) 62%)}
+  .hero-arc{display:none}
   .prod-grid{grid-template-columns:repeat(3,1fr)}
   .flow{grid-template-columns:repeat(2,1fr)}
   .chain{grid-template-columns:repeat(3,1fr);row-gap:28px}
@@ -411,12 +384,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 @media (max-width:900px){
   .nav-links a:not(.btn){display:none}
-  .hero-card{min-height:0;background:linear-gradient(180deg,#fff 0,#fff calc(100% - 320px),#0a3478 calc(100% - 320px),#0b3f8a 100%)}
-  .hero-panel,.hero-stripe,.hero-lines{display:none}
-  .hero-card.has-img{background:linear-gradient(180deg,#fff 0,#fff calc(100% - 320px),transparent calc(100% - 320px)),linear-gradient(180deg,rgba(8,43,94,.6),rgba(8,43,94,.85)),var(--hero-img) center bottom/cover no-repeat}
-  .hero-inner{grid-template-columns:1fr;width:auto;padding:40px clamp(24px,5vw,48px) 40px;gap:40px}
+  .hero{flex-direction:column;align-items:stretch;min-height:0}
+  .hero::before{display:none}
+  .hero-photo{position:relative;order:2;width:100%;height:auto;aspect-ratio:16/10;z-index:0}
+  .hero-photo img{object-position:70% bottom}
+  .hero-inner{width:auto;padding:44px clamp(24px,5vw,48px) 36px}
   .hero-copy{max-width:640px}
-  .chat{max-width:560px;width:100%;margin-inline:auto;height:500px}
   .flow-intro,.sys-top,.faq .wrap,.contact,.data{grid-template-columns:1fr}
   .faq .head-left{position:static}
   .compare{grid-template-columns:1fr}
@@ -426,19 +399,22 @@ ul,ol{margin:0;padding:0;list-style:none}
   body{font-size:15px}
   .wrap{width:calc(100% - 32px)}
   .nav{height:66px;gap:12px}
-  .brand{width:112px}
+  .brand{width:104px}
+  .brand-ir{width:96px}
   .nav-links .btn{min-height:40px;padding:0 14px;font-size:13px;margin-left:0}
   .nav-links .btn .ico{display:none}
-  .hero{padding:8px 8px 0}
-  .hero-card{border-radius:20px}
-  .hero-inner{padding:32px 18px 24px}
-  .hero h1{font-size:clamp(30px,8.6vw,38px);margin:16px 0}
+  .hero-inner{padding:32px 16px 28px}
+  .hero-copy .eyebrow{font-size:11px;letter-spacing:.16em}
+  .hero-copy .eyebrow::after{width:36px}
+  .hero h1{font-size:clamp(31px,8.8vw,40px);margin:16px 0}
   .hero-lead{font-size:15.5px}
-  .hero-actions{margin-top:24px}
-  .hero-actions .btn{flex:1 1 100%}
-  .hero-points{grid-template-columns:1fr;gap:12px;margin-top:28px;padding-top:20px}
-  .hero-points li+li{padding-left:0;border-left:0}
-  .chat{height:470px}
+  .hero-points{flex-direction:column;gap:12px;margin-top:26px}
+  .hero-points li{margin-right:0;padding-right:0;border-right:0}
+  .hero-points .ico{width:28px;height:28px}
+  .hero-actions{margin-top:26px}
+  .hero-actions .btn{flex:1 1 100%;min-height:52px}
+  .hero-photo{aspect-ratio:4/3}
+  .brand-sep{height:24px}
   .section-head p,.head-left p{font-size:15.5px}
   .eyebrow{font-size:11px;letter-spacing:.14em}
   .group-head p{padding-left:0}
@@ -490,6 +466,12 @@ ul,ol{margin:0;padding:0;list-style:none}
   .mobile-cta.show{transform:none}
   .mobile-cta .btn{width:100%}
 }
+@media (max-width:400px){
+  .nav{gap:9px}
+  .brand{width:90px}
+  .brand-ir{width:80px}
+  .nav-links .btn{padding:0 11px;font-size:12.5px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -512,6 +494,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   <symbol id="i-gauge" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M8 5V3h8v2M7.5 13h.01M16.5 13h.01M12 8.5h.01"/></symbol>
   <symbol id="i-pipe" viewBox="0 0 24 24"><path d="M2.5 8h7a3 3 0 0 1 3 3v10.5M2.5 13h4a1 1 0 0 1 1 1v7.5"/><path d="M15 3.5h6.5v5H15zM18 8.5V12a3 3 0 0 1-3 3h-2.5"/></symbol>
   <symbol id="i-air" viewBox="0 0 24 24"><rect x="3" y="9" width="13" height="9" rx="4.5"/><path d="M16 13.5h3a2 2 0 0 0 2-2V6M19 4h4M6.5 18v2.5M12.5 18v2.5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6.2"/><path d="m9.4 9 1.8 1.8 3.5-3.6"/><path d="M8.3 14 6.6 21l5.4-2.6 5.4 2.6-1.7-7"/></symbol>
+  <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M2.5 17.5h19"/><path d="M5 17.5v-2.2a7 7 0 0 1 5-6.7V6.8h4v1.8a7 7 0 0 1 5 6.7v2.2"/><path d="M10 8.6v4.4M14 8.6v4.4"/></symbol>
   <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2.8 14.4 4.5l2.9-.2.9 2.8 2.4 1.7-.9 2.8.9 2.8-2.4 1.7-.9 2.8-2.9-.2L12 21.2l-2.4-1.7-2.9.2-.9-2.8-2.4-1.7.9-2.8-.9-2.8 2.4-1.7.9-2.8 2.9.2L12 2.8Z"/><path d="m8.8 12 2.2 2.2 4.4-4.6"/></symbol>
   <symbol id="i-filter" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="4" rx="1"/><path d="M8 6.5v11a4 4 0 0 0 8 0v-11"/><path d="M11 10v6M13 10v6M12 21.5v-1"/></symbol>
   <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4.2 6.5l15.6 11M19.8 6.5 4.2 17.5"/><path d="m9.5 3.5 2.5 2 2.5-2M9.5 20.5l2.5-2 2.5 2"/></symbol>
@@ -526,6 +510,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 <header class="site-header" id="topo">
   <nav class="wrap nav" aria-label="Navegação principal">
     <a href="#topo" aria-label="Vazão Engenharia e Montagem — início"><img class="brand" src="assets/logo-vazao.webp" alt="Vazão Engenharia e Montagem" width="230" height="72"></a>
+    <span class="brand-sep" aria-hidden="true"></span>
+    <img class="brand-ir" src="assets/logo-ingersoll-rand.png" alt="Ingersoll Rand" width="476" height="100">
     <div class="nav-links">
       <a href="#produtos">Produtos</a>
       <a href="#etapas">Como funciona</a>
@@ -536,43 +522,29 @@ ul,ol{margin:0;padding:0;list-style:none}
 </header>
 
 <main>
-  <!-- HERO: texto à esquerda, chat de atendimento no painel azul -->
+  <!-- HERO: texto à esquerda, foto da instalação Ingersoll Rand à direita -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-card" data-hero-img="assets/banner-topo.jpg?v=2">
-      <svg class="hero-lines" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="#c9daf1" stroke-width="1">
-        <path d="M-40 560C180 500 300 640 560 610" opacity=".7"/><path d="M-40 600C190 540 310 680 580 650" opacity=".5"/><path d="M-40 640C200 580 320 720 600 690" opacity=".35"/>
-        <path d="M-40 60C140 20 260 150 480 120" opacity=".5"/><path d="M-40 95C150 55 270 185 500 155" opacity=".35"/>
-      </svg>
-      <div class="hero-panel" aria-hidden="true"></div>
-      <div class="hero-stripe" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <span class="eyebrow reveal">Soluções Parker e Ingersoll Rand</span>
-          <h1 id="hero-title" class="reveal d1"><span class="accent">Tratamento de ar comprimido</span> e rede de ar comprimido para sua indústria</h1>
-          <p class="hero-lead reveal d2">Filtros, secadores, drenos e tubulação em alumínio, do projeto à instalação.</p>
-          <div class="hero-actions reveal d3">
-            <a class="btn" href="#cotacao" data-cta="hero">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-outline" href="#produtos" data-cta="hero-produtos">Ver produtos <svg class="ico down"><use href="#i-down"/></svg></a>
-          </div>
-          <ul class="hero-points reveal d3">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg><div><b>Parker e</b>Ingersoll Rand</div></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-pipe"/></svg><div><b>Do projeto</b>à instalação</div></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-badge"/></svg><div><b>Desde 1991</b></div></li>
-          </ul>
-          <p class="area reveal d3"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Atendimento em Pernambuco e Ceará</p>
-        </div>
-
-        <div class="chat reveal d2" id="chat" role="region" aria-label="Atendimento Vazão Engenharia">
-          <div class="chat-h">
-            <div class="av" aria-hidden="true">V</div>
-            <p>Equipe técnica Vazão</p>
-            <div class="on"><i></i>Online</div>
-          </div>
-          <div class="chat-b" id="chat-b" aria-live="polite"></div>
-          <form class="chat-f" id="chat-f" autocomplete="on">
-            <input id="chat-in" type="text" placeholder="Digite sua resposta..." aria-label="Sua resposta">
-            <button type="submit" id="chat-send">Enviar</button>
-          </form>
+    <picture class="hero-photo">
+      <source srcset="assets/hero-ir.webp" type="image/webp">
+      <img src="assets/hero-ir.jpg" alt="Secador, filtros e rede de ar comprimido em alumínio Ingersoll Rand instalados em planta industrial" width="1659" height="948" fetchpriority="high">
+    </picture>
+    <svg class="hero-arc" viewBox="0 0 260 700" preserveAspectRatio="none" aria-hidden="true" fill="none">
+      <path d="M250 -10C150 160 70 420 10 710" stroke="#fff" stroke-width="2" opacity=".9"/>
+      <path d="M258 -10C160 160 82 420 24 710" stroke="#c9daf1" stroke-width="1" opacity=".6"/>
+    </svg>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow reveal">Soluções Ingersoll Rand</span>
+        <h1 id="hero-title" class="reveal d1">Tratamento de<br> ar comprimido e<br> <span class="accent">rede de ar para<br> sua indústria</span></h1>
+        <p class="hero-lead reveal d2">Filtros, secadores, drenos e tubulação em alumínio, do projeto à instalação.</p>
+        <ul class="hero-points reveal d2">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg><span>Tecnologia e<br>confiabilidade IR</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><span>Solução<br>completa</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-helmet"/></svg><span>Suporte técnico<br>especializado</span></li>
+        </ul>
+        <div class="hero-actions reveal d3">
+          <a class="btn" href="#cotacao" data-cta="hero">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="#produtos" data-cta="hero-produtos">Ver produtos <svg class="ico down"><use href="#i-down"/></svg></a>
         </div>
       </div>
     </div>
@@ -930,8 +902,6 @@ function tryImg(src, ok){ var im = new Image(); im.onload = function(){ ok(src);
 document.querySelectorAll('[data-img]').forEach(function(el){
   tryImg(el.getAttribute('data-img'), function(s){ el.style.backgroundImage = 'url("'+s+'")'; el.classList.add('loaded'); });
 });
-var heroCard = document.querySelector('[data-hero-img]');
-tryImg(heroCard.getAttribute('data-hero-img'), function(s){ heroCard.style.setProperty('--hero-img','url("'+s+'")'); heroCard.classList.add('has-img'); });
 /* Interface: header, animações, CTA fixo, menu ativo, */
 (function(){
   var $ = function(s, c){ return (c||document).querySelector(s); };
@@ -985,7 +955,7 @@ document.addEventListener('click', function(e){
   }
 });
 
-/* Envio do lead (formulário e chat) */
+/* Envio do lead (formulário) */
 function sendLead(lead, origem){
   var payload = Object.assign({
     origem: origem,
@@ -1030,46 +1000,6 @@ form.addEventListener('submit', function(e){
   sendLead(lead, 'formulario').then(function(){ document.getElementById('form-box').classList.add('sent'); });
 });
 
-/* Chat */
-(function(){
-  var body = document.getElementById('chat-b'), f = document.getElementById('chat-f'), input = document.getElementById('chat-in');
-  var lead = {}, step = 0;
-  var steps = [
-    {key:'nome', ask:'Olá! Para começar, qual é o seu nome?'},
-    {key:'empresa', ask:function(){ return 'Prazer, ' + lead.nome.split(' ')[0] + '! Qual é o nome da sua empresa?'; }},
-    {key:'interesse', ask:'O que você precisa para o seu ar comprimido?', opts:['Filtros coalescentes','Secadores','Drenos e separadores','Tubulação / rede de ar','Projeto e instalação','Mais de um / não sei']},
-    {key:'cidade', ask:'Em qual cidade fica a planta?', ph:'Ex.: Recife - PE'},
-    {key:'telefone', ask:'Qual o seu telefone ou WhatsApp com DDD?', ph:'(81) 99999-9999', type:'tel', test:PHONE_RE, bad:'Número inválido. Use o formato (81) 99999-9999.'},
-    {key:'email', ask:'Por fim, qual o seu melhor e-mail?', type:'email', test:MAIL_RE, bad:'E-mail inválido. Confira e tente de novo.'}
-  ];
-  function say(text, who){ var m = document.createElement('div'); m.className = 'msg ' + (who||'bot'); m.textContent = text; body.appendChild(m); body.scrollTop = body.scrollHeight; }
-  function ask(){
-    var s = steps[step];
-    say(typeof s.ask === 'function' ? s.ask() : s.ask);
-    input.type = s.type || 'text'; input.placeholder = s.ph || 'Digite sua resposta...';
-    if(s.opts){
-      var box = document.createElement('div'); box.className = 'opts';
-      s.opts.forEach(function(o){ var b = document.createElement('button'); b.type = 'button'; b.textContent = o; b.onclick = function(){ box.remove(); answer(o); }; box.appendChild(b); });
-      body.appendChild(box); body.scrollTop = body.scrollHeight;
-    }
-  }
-  function answer(v){
-    var s = steps[step]; v = v.trim(); if(!v) return;
-    if(s.test && !s.test.test(v)){ say(v,'me'); say(s.bad); return; }
-    var o = body.querySelector('.opts'); if(o) o.remove();
-    say(v,'me'); lead[s.key] = v; input.value = '';
-    if(step === 0) dataLayer.push({event:'chat_start'});
-    step++;
-    if(step < steps.length){ setTimeout(ask, 350); return; }
-    setTimeout(function(){
-      say('Perfeito! A equipe técnica da Vazão vai entrar em contato em breve. Obrigado!');
-      f.outerHTML = '<div class="chat-done">✓ Solicitação enviada com sucesso!</div>';
-      sendLead(lead, 'chat');
-    }, 350);
-  }
-  f.addEventListener('submit', function(e){ e.preventDefault(); answer(input.value); });
-  ask();
-})();
 </script>
 </body>
 </html>
