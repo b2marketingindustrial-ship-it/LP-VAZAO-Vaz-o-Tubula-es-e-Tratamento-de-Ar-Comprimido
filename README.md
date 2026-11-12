@@ -9,8 +9,9 @@ Regras de texto: Parker aparece só como "soluções Parker" (nunca distribuidor
 ## Estrutura
 
 - `index.html`: página única e autocontida (HTML, CSS e JS inline), mesma identidade visual da LP NR13 e do site da Vazão.
-- Seções: topo com chat · vitrine Ingersoll Rand (20 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · formulário de cotação.
-- O botão "Solicitar cotação" de cada produto já preenche **Interesse** e **Produto** no formulário.
+- Seções: topo com o shortcode do chat · vitrine Ingersoll Rand (20 itens) · sistema de tratamento (fluxo do ar + refrigeração × adsorção) · etapas do atendimento + dados para a cotação · diferenciais · perguntas frequentes · banner · cotação com o shortcode do formulário · rodapé em uma linha (padrão B2).
+- Shortcodes do plugin de atendimento do WordPress: `[atendimento_chat id="default"]` na coluna de 300px do topo e `[atendimento_form id="default-form"]` na cotação. Fora do WordPress aparecem como texto cru.
+- Todo CTA é `<button type="button" class="btn-slave-whats" data-cta="…">`: o plugin captura o clique e abre o formulário do WhatsApp. Não há formulário nem envio de lead na página.
 
 ## Imagens (`assets/`)
 
@@ -50,12 +51,10 @@ Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto
 
 ## Configuração (bloco `CONFIG` no fim do `index.html`)
 
-- `gtmId`: ID do Google Tag Manager. Vazio = não carrega.
-- `leadEndpoint`: URL que recebe o lead (POST JSON). **Enquanto estiver vazio, o lead segue pelo WhatsApp da campanha (81) 99203-9379**, já com os dados preenchidos.
-- `privacyUrl`: link da política de privacidade.
+- `gtmId`: ID do Google Tag Manager. Vazio = não carrega (no WordPress o GTM costuma vir do site).
 
-O lead leva junto UTMs, `gclid` e `keyword` da URL (guardados por 90 dias), além de campanha, grupo, interesse e produto.
-Eventos no `dataLayer`: `cta_click` (com `produto`), `vitrine_aba`, `chat_start`, `generate_lead`.
+Evento no `dataLayer`: `cta_click`, com `cta_local` (o `data-cta`) e `produto` quando o clique vem da vitrine (`linhas-<produto>`).
+CTAs: `header-cta` · `hero-primary` · `hero-secondary` · `linhas-cta` · `linhas-<produto>` (20) · `sistema-cta` · `dados-cta` · `perguntas-cta` · `banner-cta` · `cotacao-whatsapp` · `mobile-cta`.
 
 ## Publicação
 
@@ -64,7 +63,7 @@ Push em `main` → GitHub Actions (`.github/workflows/build-wp.yml`) copia `inde
 ## Pendências
 
 - URL final: o canonical, o `robots.txt` e o `sitemap.xml` usam `vazao.b2marketingindustrial.com.br/tratamento-de-ar-comprimido/` como provisória.
-- Link da política de privacidade, GTM e endpoint do lead.
+- GTM (se não vier do WordPress).
 - Fotos e logos listadas acima.
 
 ## Rodar localmente

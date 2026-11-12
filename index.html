@@ -152,6 +152,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#f3f6fb 0%,#f3f6fb 30%,rgba(243,246,251,.94) 37%,rgba(243,246,251,.6) 45%,rgba(243,246,251,0) 55%)}
 .hero-arc{position:absolute;top:0;bottom:0;left:calc(26% + 120px);z-index:-1;width:260px;height:100%;pointer-events:none}
 .hero-inner{position:relative;width:min(1440px,100% - 2*clamp(28px,4.5vw,72px));margin-inline:auto;padding:64px 0 76px}
+.hero-inner{display:grid;grid-template-columns:minmax(0,600px) minmax(0,1fr) 300px;align-items:center;gap:0 24px}
+.hero-chat{grid-column:3;width:300px}
 .hero-copy{max-width:600px}
 .hero-copy .eyebrow{color:var(--blue-700);font-size:13px;letter-spacing:.2em}
 .hero-copy .eyebrow::before{display:none}
@@ -193,7 +195,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .prod h4{margin:0 0 12px;font-size:16.5px;line-height:1.3;font-weight:700;letter-spacing:-.015em;color:var(--blue-700)}
 .prod-f{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:auto}
 .prod .ill{padding-left:12px;border-left:1px solid var(--line-strong);font-size:12px;font-style:italic;color:var(--muted)}
-.prod .quote{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--red-600)}
+.prod .quote{padding:0;border:0;background:none;text-align:left;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--red-600)}
 .prod .quote .ico{width:15px;height:15px;stroke-width:2.4;transition:transform .2s var(--ease)}
 .prod .quote:hover .ico{transform:translateX(3px)}
 .prod.feat{border-color:var(--blue-500);box-shadow:0 0 0 1px var(--blue-500),0 20px 40px -24px rgba(11,63,138,.5)}
@@ -312,48 +314,20 @@ ul,ol{margin:0;padding:0;list-style:none}
 .info a{font-weight:700;color:var(--blue-700)}
 .info a:hover{color:var(--red-600)}
 
-.form-card{position:relative;overflow:hidden;padding:clamp(26px,2.6vw,40px);border-radius:20px;background:#fff;border:1px solid #dfe8f3;box-shadow:0 30px 60px -36px rgba(10,43,87,.4)}
-.form-card::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--red-600) 0 40%,var(--blue-500) 40% 100%)}
-.form-card h3{font-size:clamp(22px,1.8vw,26px);line-height:1.2;color:var(--blue-700)}
-.form-card .hint{margin:6px 0 22px;font-size:15px;color:var(--muted)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
-.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.field label{font-size:13px;font-weight:700;color:var(--navy-800)}
-.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:10px;background:#fff;font-size:15px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
-.field textarea{min-height:96px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(36,104,204,.18)}
-.field.flash input,.field.flash select{border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(36,104,204,.22)}
-.form-card .btn{width:100%;min-height:56px;margin-top:6px;font-size:16px}
-.legal{margin-top:12px;font-size:12.5px;text-align:center;color:var(--muted)}
-.legal a{text-decoration:underline}
-.err{display:none;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--red-700)}
-.form-ok{display:none;padding:36px 10px;text-align:center}
-.form-ok .ok-ico{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:#eaf6ee;color:var(--green-600)}
-.form-ok .ok-ico .ico{width:30px;height:30px;stroke-width:2.4}
-.form-card.sent form{display:none}
-.form-card.sent .form-ok{display:block}
+.contact-copy .btn-whats{margin-top:26px}
+.btn-whats{--bg:#1fa855;box-shadow:0 10px 22px -10px rgba(31,168,85,.55)}
+.btn-whats:hover{--bg:#178a45;box-shadow:0 16px 28px -12px rgba(31,168,85,.6)}
+.btn-whats:hover .ico{transform:none}
+.form-slot{min-height:520px}
 
 /* ---------- Rodapé ---------- */
-.site-footer{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(70% 120% at 85% 40%,#0b3170 0%,rgba(11,49,112,0) 60%),linear-gradient(180deg,#0a2552 0%,#071c40 100%);color:#b9c9e2;font-size:15px}
-.site-footer::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(rgba(74,144,255,.06) 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,rgba(74,144,255,.06) 1px,transparent 1px) 0 0/40px 40px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 30%,transparent 60%,#000);mask-image:linear-gradient(90deg,#000,transparent 30%,transparent 60%,#000)}
-.foot-deco{position:absolute;left:0;top:0;z-index:-1;width:420px;height:100%;pointer-events:none}
-.site-footer .wrap{width:min(1300px,100% - clamp(48px,10vw,240px))}
-.footer-top{display:grid;grid-template-columns:minmax(0,420px) auto auto minmax(0,260px);align-items:start;gap:0 clamp(36px,4vw,72px);padding:clamp(64px,7vw,104px) 0 clamp(40px,4vw,56px)}
-.footer-brand{padding-right:clamp(24px,3vw,56px);border-right:1px solid rgba(124,160,220,.3);min-height:100%}
-.foot-logos{position:relative;display:inline-flex;align-items:center;padding:16px 26px 20px;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 24px 44px -24px rgba(0,0,0,.6)}
-.foot-logos::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--red-600) 0 40%,var(--blue-500) 40% 100%)}
-.foot-logos .brand{width:178px}
-.footer-brand p{margin-top:26px;max-width:400px;font-size:clamp(15px,1.05vw,17px);line-height:1.6;color:#d3def0}
-.site-footer h4{position:relative;margin:4px 0 30px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:800}
-.site-footer h4::after{content:"";position:absolute;left:0;bottom:-14px;width:36px;height:3px;border-radius:2px;background:var(--red-600)}
-.site-footer ul{display:grid;gap:12px}
-.site-footer ul a,.site-footer ul span{font-size:clamp(15px,1.02vw,16.5px);line-height:1.45;color:#c6d4ea;transition:color .2s}
-.site-footer ul a:hover{color:#fff}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 0 clamp(36px,4vw,56px);border-top:1px solid rgba(124,160,220,.3);font-size:14.5px;color:#c6d4ea}
-.to-top{display:inline-flex;align-items:center;gap:10px;flex:none;padding:12px 30px;border:1.5px solid #2f6fd6;border-radius:999px;font-weight:700;color:#fff;transition:background-color .2s}
-.to-top:hover{background:#2f6fd6}
-.to-top .ico{width:16px;height:16px;stroke-width:2.2;transition:transform .25s var(--ease)}
-.to-top:hover .ico{transform:translateY(-2px)}
+.site-footer{position:relative;background:linear-gradient(180deg,#0a2552 0%,#071c40 100%);color:#b9c9e2}
+.footer-line{display:flex;align-items:center;justify-content:space-between;gap:12px 32px;padding:22px 0;border-top:1px solid rgba(124,160,220,.25);font-size:13px;line-height:1.5}
+.footer-line p{flex:none;color:#9fb3d3}
+.footer-line address{font-style:normal;color:#c6d4ea}
+.footer-line address .ico{display:inline-block;width:15px;height:15px;margin-right:8px;vertical-align:-3px;color:var(--red-600)}
+.footer-line a{font-weight:700;color:#e3ebf7;transition:color .2s}
+.footer-line a:hover{color:#fff}
 
 /* ---------- Divisores arredondados entre seções (mesmo efeito do site) ---------- */
 .stack{margin-top:calc(var(--round) * -1);padding-top:calc(var(--sec-pad) + var(--round));border-radius:0 0 var(--round) var(--round);box-shadow:0 34px 50px -40px rgba(10,43,87,.3)}
@@ -372,8 +346,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* ---------- Responsivo ---------- */
 @media (max-width:1200px){
   .benefits{grid-template-columns:repeat(3,1fr)}
-  .footer-top{grid-template-columns:repeat(3,auto);gap:36px 56px}
-  .footer-brand{grid-column:1/-1;padding:0 0 32px;border-right:0;border-bottom:1px solid rgba(124,160,220,.3)}
+  .footer-line{flex-direction:column;text-align:center}
 }
 @media (max-width:1080px){
   .hero-photo{width:80%}
@@ -397,6 +370,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero-photo img{object-position:70% bottom}
   .hero-inner{width:auto;padding:44px clamp(24px,5vw,48px) 36px}
   .hero-copy{max-width:640px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-chat{grid-column:1;order:3;width:100%;max-width:420px}
   .flow-intro,.sys-top,.faq .wrap,.contact,.data{grid-template-columns:1fr}
   .faq .head-left{position:static}
   .compare{grid-template-columns:1fr}
@@ -461,14 +436,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   .cta .btn{width:100%}
   .cta-list{flex-direction:column;gap:0;padding:8px 24px}
   .cta-list li{flex:none;padding:16px 0;border-bottom:1px solid #d9e3ef}
-  .grid2{grid-template-columns:1fr}
-  .form-card{padding:28px 20px 22px}
   .site-footer .wrap{width:calc(100% - 32px)}
-  .footer-top{grid-template-columns:1fr 1fr;gap:32px 24px;padding:52px 0 32px}
-  .footer-top>div:last-child{grid-column:1/-1}
-  .foot-logos{padding:12px 20px 16px}
-  .foot-logos .brand{width:150px}
-  .footer-bottom{flex-direction:column;align-items:flex-start;padding-bottom:110px}
+  .footer-line{padding-bottom:96px}
   .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px max(10px,env(safe-area-inset-bottom));background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s var(--ease)}
   .mobile-cta.show{transform:none}
   .mobile-cta .btn{width:100%}
@@ -488,6 +457,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4l-4.5 1.1Z"/><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.1-1.3-1.9-.9-.8.8a4.4 4.4 0 0 1-2.4-2.4l.8-.8-.9-1.9L9 8.6Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
   <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
@@ -523,7 +493,7 @@ ul,ol{margin:0;padding:0;list-style:none}
       <a href="#produtos">Produtos</a>
       <a href="#etapas">Como funciona</a>
       <a href="#faq">Dúvidas</a>
-      <a class="btn btn-sm" href="#cotacao" data-cta="header">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <button type="button" class="btn btn-sm btn-slave-whats" data-cta="header-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
     </div>
   </nav>
 </header>
@@ -550,10 +520,12 @@ ul,ol{margin:0;padding:0;list-style:none}
           <li><svg class="ico" aria-hidden="true"><use href="#i-helmet"/></svg><span>Suporte técnico<br>especializado</span></li>
         </ul>
         <div class="hero-actions reveal d3">
-          <a class="btn" href="#cotacao" data-cta="hero">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-outline" href="#produtos" data-cta="hero-produtos">Ver produtos <svg class="ico down"><use href="#i-down"/></svg></a>
+          <button type="button" class="btn btn-slave-whats" data-cta="hero-primary">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
+          <button type="button" class="btn btn-outline btn-slave-whats" data-cta="hero-secondary"><svg class="ico"><use href="#i-headset"/></svg> Falar com especialista</button>
         </div>
       </div>
+      <!-- Shortcode do chat (plugin de atendimento do WordPress), coluna de 300px -->
+      <div class="hero-chat">[atendimento_chat id="default"]</div>
     </div>
   </section>
 
@@ -569,29 +541,29 @@ ul,ol{margin:0;padding:0;list-style:none}
       <div class="panel reveal" id="pnl-ir">
         <div class="group-head">
           <div><h3>Distribuidor Ingersoll Rand</h3><p>Tubulação SimplAir, secadores, filtros coalescentes e drenos sem perda.</p></div>
-          <a href="#cotacao" class="btn btn-sm" data-cta="vitrine-ir" data-linha="Mais de um / não sei" data-produto="Linha Ingersoll Rand">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <button type="button" class="btn btn-sm btn-slave-whats" data-cta="linhas-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
         </div>
         <ul class="prod-grid">
-          <li class="prod feat"><div class="media fit" data-img="assets/produtos/ir-tubulacao-aluminio-simplair.jpg?v=5"><svg class="ico" aria-hidden="true"><use href="#i-pipe"/></svg></div><div class="prod-b"><span class="tag">Tubulação</span><h4>Tubulação alumínio SimplAir</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Tubulação SimplAir / rede de ar">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-dreno-liquidator.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Dreno sem perdas Liquidator</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Drenos e separadores de condensado">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-drenos-eletronicos.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Drenos eletrônicos sem perda</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Drenos e separadores de condensado">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-drenos-pnld-ii.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Drenos sem perda (PNLD II)</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Drenos e separadores de condensado">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-filtros-coalescentes-aco-carbono.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtros coalescentes aço carbono</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-filtros-coalescentes-serie-f.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtros coalescentes Série F</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Filtros coalescentes">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-sem-aquecimento.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção sem aquecimento</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hoc-1088.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção (HOC) 1.088/23.703 m³/h</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hoc-1191.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção (HOC) 1.191/24.119 m³/h</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-4-226.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção 4,2 a 226 m³/min</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-ventilador.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção com ventilador 4,2 a 226 m³/min</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-d-ila.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção D-ILA</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hl.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção HL</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-modular.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção modular</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-ponto-de-uso.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção ponto de uso</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-adsorcao-hoc-420.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por adsorção HOC 420/3.680 m³/h</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-adsorcao-hla.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por adsorção HLA</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-refrigeracao-10-150-cfm.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por refrigeração 10–150 cfm</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-refrigeracao-3600-24000-cfm.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por refrigeração 3.600 a 24.000 CFM</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
-          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-refrigeracao-nirvana.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por refrigeração Nirvana</h4><div class="prod-f"><a class="quote" href="#cotacao" data-cta="produto" data-linha="Secadores">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod feat"><div class="media fit" data-img="assets/produtos/ir-tubulacao-aluminio-simplair.jpg?v=5"><svg class="ico" aria-hidden="true"><use href="#i-pipe"/></svg></div><div class="prod-b"><span class="tag">Tubulação</span><h4>Tubulação alumínio SimplAir</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-tubulacao-aluminio-simplair">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-dreno-liquidator.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Dreno sem perdas Liquidator</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-dreno-liquidator">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-drenos-eletronicos.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Drenos eletrônicos sem perda</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-drenos-eletronicos">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-drenos-pnld-ii.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></div><div class="prod-b"><span class="tag">Condensado</span><h4>Drenos sem perda (PNLD II)</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-drenos-pnld-ii">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-filtros-coalescentes-aco-carbono.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtros coalescentes aço carbono</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-filtros-coalescentes-aco-carbono">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-filtros-coalescentes-serie-f.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg></div><div class="prod-b"><span class="tag">Filtro</span><h4>Filtros coalescentes Série F</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-filtros-coalescentes-serie-f">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-sem-aquecimento.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção sem aquecimento</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-sem-aquecimento">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hoc-1088.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção (HOC) 1.088/23.703 m³/h</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-hoc-1088">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hoc-1191.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção (HOC) 1.191/24.119 m³/h</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-hoc-1191">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-4-226.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção 4,2 a 226 m³/min</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-4-226">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-ventilador.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção com ventilador 4,2 a 226 m³/min</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-ventilador">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-d-ila.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção D-ILA</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-d-ila">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-hl.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção HL</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-hl">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-modular.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção modular</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-modular">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-adsorcao-ponto-de-uso.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por adsorção ponto de uso</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-adsorcao-ponto-de-uso">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-adsorcao-hoc-420.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por adsorção HOC 420/3.680 m³/h</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secadores-adsorcao-hoc-420">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-adsorcao-hla.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por adsorção HLA</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secadores-adsorcao-hla">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secador-refrigeracao-10-150-cfm.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secador por refrigeração 10–150 cfm</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secador-refrigeracao-10-150-cfm">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-refrigeracao-3600-24000-cfm.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por refrigeração 3.600 a 24.000 CFM</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secadores-refrigeracao-3600-24000-cfm">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
+          <li class="prod"><div class="media fit" data-img="assets/produtos/ir-secadores-refrigeracao-nirvana.jpg?v=4"><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg></div><div class="prod-b"><span class="tag">Secador</span><h4>Secadores por refrigeração Nirvana</h4><div class="prod-f"><button type="button" class="quote btn-slave-whats" data-cta="linhas-secadores-refrigeracao-nirvana">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button><span class="ill">Imagens ilustrativas</span></div></div></li>
         </ul>
       </div>
     </div>
@@ -630,7 +602,7 @@ ul,ol{margin:0;padding:0;list-style:none}
           <p class="models">Parker CDAS HL e K-MT · secadores por adsorção Ingersoll Rand</p>
         </article>
       </div>
-      <div class="cta-row"><a href="#cotacao" class="btn" data-cta="sistema">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+      <div class="cta-row"><button type="button" class="btn btn-slave-whats" data-cta="sistema-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button></div>
     </div>
   </section>
 
@@ -657,7 +629,7 @@ ul,ol{margin:0;padding:0;list-style:none}
         <div>
           <h3>Dados que agilizam sua cotação</h3>
           <p>Com essas informações, a equipe técnica dimensiona o secador, os filtros e a rede para a sua aplicação. Não tem todos? Envie o que tiver.</p>
-          <a href="#cotacao" class="btn" data-cta="dados">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <button type="button" class="btn btn-slave-whats" data-cta="dados-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
         </div>
         <ul>
           <li><svg class="ico" aria-hidden="true"><use href="#i-air"/></svg><div><b>Vazão</b><span>consumo de ar da operação</span></div></li>
@@ -732,7 +704,7 @@ ul,ol{margin:0;padding:0;list-style:none}
         <span class="eyebrow left">Perguntas frequentes</span>
         <h2 id="faq-title">Dúvidas sobre tratamento e <em>rede de ar comprimido</em></h2>
         <p>Não encontrou sua resposta? Fale com a equipe técnica da Vazão.</p>
-        <a href="#cotacao" class="btn" data-cta="faq">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <button type="button" class="btn btn-slave-whats" data-cta="perguntas-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
       </div>
       <div class="faq-list reveal d1">
         <details open><summary>O que é tratamento de ar comprimido?</summary><p>O tratamento de ar comprimido reúne tecnologias para controlar partículas, óleo e umidade antes que o ar chegue ao processo industrial.</p></details>
@@ -758,7 +730,7 @@ ul,ol{margin:0;padding:0;list-style:none}
             <span class="eyebrow">Fale com a equipe técnica</span>
             <h2 id="cta-title">Precisa dimensionar um secador ou uma rede de ar?</h2>
             <p>Envie vazão, pressão e ponto de orvalho. A Vazão indica o tratamento e a tubulação para sua aplicação.</p>
-            <a class="btn" href="#cotacao" data-cta="banner">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <button type="button" class="btn btn-slave-whats" data-cta="banner-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
           </div>
           <ul class="cta-list">
             <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><div><strong>Engenharia especializada</strong><span>desde 1991</span></div></li>
@@ -769,7 +741,7 @@ ul,ol{margin:0;padding:0;list-style:none}
       </div>
     </section>
 
-    <!-- COTAÇÃO (formulário) -->
+    <!-- COTAÇÃO (shortcode do formulário) -->
     <section class="contact-section" id="cotacao" aria-labelledby="contact-title">
       <div class="wrap contact">
         <div class="contact-copy reveal">
@@ -779,107 +751,36 @@ ul,ol{margin:0;padding:0;list-style:none}
           <ul class="info">
             <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Atendemos todas as indústrias do Nordeste</span></li>
             <li><svg class="ico" aria-hidden="true"><use href="#i-factory"/></svg><span>Av. Barão de Bonito, 880 - Várzea, Recife - PE, 50740-080</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+558132288378" data-cta="telefone">(81) 3228-8378</a></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+558132288378" data-cta="cotacao-telefone">(81) 3228-8378</a></li>
           </ul>
+          <button type="button" class="btn btn-whats btn-slave-whats" data-cta="cotacao-whatsapp"><svg class="ico"><use href="#i-whats"/></svg> Chamar no WhatsApp</button>
         </div>
 
-        <div class="form-card reveal d1" id="form-box">
-          <form id="lead-form" novalidate>
-            <h3>Solicite uma cotação</h3>
-            <p class="hint">Preencha os dados e a equipe técnica entra em contato.</p>
-            <div class="grid2">
-              <div class="field"><label for="f-nome">Nome*</label><input id="f-nome" name="nome" autocomplete="name" required></div>
-              <div class="field"><label for="f-empresa">Empresa*</label><input id="f-empresa" name="empresa" autocomplete="organization" required></div>
-            </div>
-            <div class="grid2">
-              <div class="field"><label for="f-email">E-mail*</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-              <div class="field"><label for="f-tel">Telefone / WhatsApp*</label><input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(81) 99999-9999" required></div>
-            </div>
-            <div class="grid2">
-              <div class="field"><label for="f-cidade">Cidade / Estado*</label><input id="f-cidade" name="cidade" autocomplete="address-level2" placeholder="Ex.: Recife - PE" required></div>
-              <div class="field"><label for="f-linha">Interesse</label>
-                <select id="f-linha" name="interesse">
-                  <option value="">Selecione</option>
-                  <option>Filtros coalescentes</option>
-                  <option>Secadores</option>
-                  <option>Drenos e separadores de condensado</option>
-                  <option>Tubulação SimplAir / rede de ar</option>
-                  <option>Projeto e instalação de rede</option>
-                  <option>Mais de um / não sei</option>
-                </select>
-              </div>
-            </div>
-            <div class="field"><label for="f-prod">Produto</label><input id="f-prod" name="produto" placeholder="Ex.: Secador por adsorção CDAS HL"></div>
-            <div class="field"><label for="f-desc">Descrição da necessidade</label><textarea id="f-desc" name="descricao" placeholder="Ex.: vazão, pressão, ponto de orvalho, qualidade do ar, pontos de consumo..."></textarea></div>
-            <button type="submit" class="btn" data-cta="form">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button>
-            <p class="err" id="form-err" role="alert">Preencha nome, empresa, e-mail, telefone e cidade.</p>
-            <p class="legal">Ao enviar, você concorda com a <a href="#" data-privacy>Política de Privacidade</a>.</p>
-          </form>
-          <div class="form-ok" role="status">
-            <div class="ok-ico"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
-            <h3>Solicitação enviada!</h3>
-            <p class="hint">Obrigado. A equipe técnica da Vazão vai entrar em contato em breve.</p>
-          </div>
-        </div>
+        <!-- Shortcode do formulário (plugin de atendimento do WordPress) -->
+        <div class="form-slot reveal d1">[atendimento_form id="default-form"]</div>
       </div>
     </section>
   </div>
 </main>
 
+<!-- Rodapé do padrão B2: uma linha (copyright · endereço · crédito) -->
 <footer class="site-footer">
-  <svg class="foot-deco" viewBox="0 0 420 600" preserveAspectRatio="xMinYMid slice" aria-hidden="true" fill="none">
-    <g stroke="#3b82f6" opacity=".22"><circle cx="-20" cy="380" r="110"/><circle cx="-20" cy="380" r="170"/><circle cx="-20" cy="380" r="235"/></g>
-    <g stroke="#3b82f6" opacity=".3" stroke-dasharray="6 7"><path d="M70 100V600M0 345H290"/></g>
-    <g stroke="#6ea2ff" opacity=".55"><path d="M256 470v24M244 482h24"/></g>
-  </svg>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="foot-logos"><img class="brand" src="assets/logo-vazao.webp" alt="Vazão Engenharia e Montagem" width="230" height="72" loading="lazy"></div>
-        <p>Engenharia e montagem industrial desde 1991. Tratamento de ar comprimido e rede de ar comprimido para indústrias de todo o Nordeste.</p>
-      </div>
-      <div>
-        <h4>Navegação</h4>
-        <ul><li><a href="#produtos">Produtos</a></li><li><a href="#etapas">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li></ul>
-      </div>
-      <div>
-        <h4>Produtos</h4>
-        <ul><li><a href="#produtos">Filtros OIL-X</a></li><li><a href="#produtos">Secadores PSE</a></li><li><a href="#produtos">Secadores CDAS HL e K-MT</a></li><li><a href="#produtos">Tubulação SimplAir</a></li></ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li><a href="tel:+558132288378" data-cta="telefone-rodape">(81) 3228-8378</a></li>
-          <li><span>Av. Barão de Bonito, 880 - Várzea, Recife - PE</span></li>
-          <li><a href="#" data-privacy>Política de Privacidade</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="ano">2026</span> Vazão Engenharia e Montagem. Todos os direitos reservados. · Desenvolvido por B2 Marketing Industrial.</span>
-      <a class="to-top" href="#topo">Voltar ao topo <svg class="ico"><use href="#i-up"/></svg></a>
-    </div>
+  <div class="wrap footer-line">
+    <p>© <span id="ano">2026</span> Vazão Engenharia e Montagem. Todos os direitos reservados.</p>
+    <address><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Av. Barão de Bonito, 880 - Várzea, Recife - PE, 50740-080</span></address>
+    <p>Desenvolvido por <a href="https://b2marketingindustrial.com.br" target="_blank" rel="noopener noreferrer">B2 Marketing Industrial</a></p>
   </div>
 </footer>
 
-<div class="mobile-cta" id="mobile-cta"><a class="btn" href="#cotacao" data-cta="mobile">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+<div class="mobile-cta" id="mobile-cta"><button type="button" class="btn btn-slave-whats" data-cta="mobile-cta">Solicitar cotação <svg class="ico"><use href="#i-arrow"/></svg></button></div>
 
 <script>
 document.documentElement.classList.add('js');
 
 /* ================= CONFIGURAÇÃO ================= */
 var CONFIG = {
-  // ID do Google Tag Manager (ex.: "GTM-XXXXXXX"). Vazio = não carrega.
-  gtmId: "",
-  // Endpoint que recebe o lead (POST JSON): RD Station, CRM, webhook etc.
-  // Vazio = o lead segue pelo WhatsApp da campanha, para não se perder.
-  leadEndpoint: "",
-  // WhatsApp usado só como saída do lead quando não há endpoint configurado
-  whatsapp: "5581992039379",
-  // Link da política de privacidade (placeholder até o cliente enviar)
-  privacyUrl: "#",
-  campanha: "[PES] Compressores - Nova",
-  grupo: "NOVO 1 Tubulação de Ar + NOVO 2 Tratamento de Ar"
+  // ID do Google Tag Manager (ex.: "GTM-XXXXXXX"). Vazio = não carrega (no WordPress o GTM costuma vir do site).
+  gtmId: ""
 };
 
 /* GTM */
@@ -889,20 +790,6 @@ var CONFIG = {
 window.dataLayer = window.dataLayer || [];
 
 document.getElementById('ano').textContent = new Date().getFullYear();
-document.querySelectorAll('[data-privacy]').forEach(function(a){ a.href = CONFIG.privacyUrl; if(CONFIG.privacyUrl !== '#'){ a.target = '_blank'; a.rel = 'noopener'; } });
-
-/* Rastreamento: UTMs, gclid e palavra-chave (guardados por 90 dias) */
-var TRACK_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','keyword','matchtype','adgroup','campaign'];
-function getTracking(){
-  var data = {};
-  try { data = JSON.parse(localStorage.getItem('vz_track') || '{}'); if(data._exp && data._exp < Date.now()) data = {}; } catch(e){ data = {}; }
-  var q = new URLSearchParams(location.search), found = false;
-  TRACK_KEYS.forEach(function(k){ var v = q.get(k); if(v){ data[k] = v; found = true; } });
-  if(found){ data._exp = Date.now() + 90*864e5; try { localStorage.setItem('vz_track', JSON.stringify(data)); } catch(e){} }
-  delete data._exp;
-  return data;
-}
-var TRACKING = getTracking();
 
 /* Imagens: entram sozinhas quando o arquivo existir em assets/ */
 function tryImg(src, ok){ var im = new Image(); im.onload = function(){ ok(src); }; im.src = src; }
@@ -948,63 +835,12 @@ document.querySelectorAll('[data-img]').forEach(function(el){
 
 })();
 
-/* Cliques em CTA (produto da vitrine já entra preenchido no formulário) */
+/* Cliques em CTA: o plugin de atendimento do WordPress abre o formulário (classe btn-slave-whats);
+   aqui só vai o evento para o dataLayer, com o produto quando o clique vem da vitrine. */
 document.addEventListener('click', function(e){
   var c = e.target.closest('[data-cta]'); if(!c) return;
-  var prodName = c.closest('.prod') ? c.closest('.prod').querySelector('h4').textContent : c.getAttribute('data-produto');
-  dataLayer.push({event:'cta_click', cta_local:c.getAttribute('data-cta'), produto: prodName || ''});
-  var linha = c.getAttribute('data-linha');
-  if (linha) {
-    var sel = document.getElementById('f-linha'), prod = document.getElementById('f-prod');
-    sel.value = linha;
-    if (prodName) prod.value = prodName;
-    [sel, prod].forEach(function(el){ var f = el.closest('.field'); f.classList.add('flash'); setTimeout(function(){ f.classList.remove('flash'); }, 1800); });
-  }
-});
-
-/* Envio do lead (formulário) */
-function sendLead(lead, origem){
-  var payload = Object.assign({
-    origem: origem,
-    pagina: location.href.split('?')[0],
-    campanha: CONFIG.campanha,
-    grupo: CONFIG.grupo,
-    enviado_em: new Date().toISOString()
-  }, TRACKING, lead);
-  dataLayer.push({event:'generate_lead', lead_origem: origem, interesse: lead.interesse || '', produto: lead.produto || ''});
-
-  if(CONFIG.leadEndpoint){
-    return fetch(CONFIG.leadEndpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload), keepalive:true})
-      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); })
-      .catch(function(err){ console.error('Falha no envio do lead', err); openWhats(lead); });
-  }
-  openWhats(lead);
-  return Promise.resolve();
-}
-function openWhats(l){
-  var msg = 'Olá! Vim pela página de Tratamento e Rede de Ar Comprimido e gostaria de uma cotação.\n' +
-    'Nome: ' + l.nome + '\nEmpresa: ' + l.empresa + '\nTelefone: ' + l.telefone + '\nE-mail: ' + l.email +
-    (l.cidade ? '\nCidade/Estado: ' + l.cidade : '') +
-    (l.interesse ? '\nInteresse: ' + l.interesse : '') +
-    (l.produto ? '\nProduto: ' + l.produto : '') +
-    (l.descricao ? '\nNecessidade: ' + l.descricao : '');
-  window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg), '_blank');
-}
-var PHONE_RE = /^\(?\d{2}\)?[\s-]?9?\d{4}[\s-]?\d{4}$/;
-var MAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-/* Formulário */
-var form = document.getElementById('lead-form');
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  var fd = new FormData(form), lead = {};
-  fd.forEach(function(v,k){ lead[k] = String(v).trim(); });
-  var ok = lead.nome && lead.empresa && MAIL_RE.test(lead.email) && PHONE_RE.test(lead.telefone) && lead.cidade;
-  var err = document.getElementById('form-err');
-  if(!ok){ err.style.display = 'block'; err.textContent = !MAIL_RE.test(lead.email||'') && lead.email ? 'Confira o e-mail informado.' : (!PHONE_RE.test(lead.telefone||'') && lead.telefone ? 'Confira o telefone, com DDD.' : 'Preencha nome, empresa, e-mail, telefone e cidade.'); return; }
-  err.style.display = 'none';
-  var btn = form.querySelector('button'); btn.disabled = true;
-  sendLead(lead, 'formulario').then(function(){ document.getElementById('form-box').classList.add('sent'); });
+  var prod = c.closest('.prod');
+  dataLayer.push({event:'cta_click', cta_local:c.getAttribute('data-cta'), produto: prod ? prod.querySelector('h4').textContent : ''});
 });
 
 </script>
