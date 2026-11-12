@@ -57,6 +57,10 @@ Fotos da vitrine (Ingersoll Rand) em `assets/produtos/`: 800×400 (2:1), produto
 O lead leva junto UTMs, `gclid` e `keyword` da URL (guardados por 90 dias), além de campanha, grupo, interesse e produto.
 Eventos no `dataLayer`: `cta_click` (com `produto`), `vitrine_aba`, `chat_start`, `generate_lead`.
 
+## Publicação
+
+Push em `main` → GitHub Actions (`.github/workflows/build-wp.yml`) copia `index.html`, `assets/`, `robots.txt` e `sitemap.xml` para a raiz da branch órfã `wp-build` → o plugin B2 LP Publisher (WordPress) lê de lá. Não há build: a página é HTML puro com caminhos relativos.
+
 ## Pendências
 
 - URL final: o canonical, o `robots.txt` e o `sitemap.xml` usam `vazao.b2marketingindustrial.com.br/tratamento-de-ar-comprimido/` como provisória.

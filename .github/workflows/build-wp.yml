@@ -1,0 +1,48 @@
+# Publica a landing page na branch `wp-build`.
+# O plugin B2 LP Publisher (WordPress) lê HTML + assets prontos dessa branch;
+# ele não roda build, por isso o index.html precisa ficar na raiz da branch.
+# Esta LP é HTML puro (sem build): o job só monta dist/ com os arquivos públicos.
+name: Build para WordPress
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Uma publicação por vez; um push novo cancela a anterior em andamento.
+concurrency:
+  group: wp-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Publicação em wp-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Montar dist/ com os arquivos públicos
+        run: |
+          set -euo pipefail
+          mkdir dist
+          cp index.html robots.txt sitemap.xml dist/
+          cp -r assets dist/
+          test -f dist/index.html
+
+      - name: Publicar conteúdo de dist/ na raiz da branch wp-build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd dist
+          # Repositório órfão só com a saída; independente do git do projeto.
+          git init -b wp-build
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "build: ${GITHUB_REF_NAME}@${GITHUB_SHA::7}" -m "Origem: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:wp-build
